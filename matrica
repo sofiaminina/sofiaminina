@@ -1,0 +1,5 @@
+A=rand(3,3);
+[F,err]=fopen('matrica3','w');
+fprintf(F,'%.4f %.4f %.4f\n %.4f %.4f %.4f\n %.4f %.4f %.4f\n',A');
+
+fclose(F);
