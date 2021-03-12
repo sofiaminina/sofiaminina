@@ -1,0 +1,4 @@
+function blocks(n,m)
+A=ones(n,m);
+C=zeros(n,m);
+K=[A C;C A]
