@@ -1,0 +1,7 @@
+function two_rows(A);
+[n,k]=size(A);
+if((n==2)&&(ndims(A)==2)) disp (A);
+else
+    fprintf('Массив должен быть двумерным и иметь две строки!\n');
+    disp(A*0);
+end
