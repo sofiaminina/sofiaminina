@@ -74,10 +74,19 @@ y=sin(m.*fi).*sin(n.*fi+fi0);
 plot(x,y)
 grid on
 %%
-%бабочка темпла фея
+%14)30 Бабочка Темпла Фея
 fi=-2*pi:0.01:2*pi;
 r=exp(cos(fi))-2*cos(4*fi)+(sin(fi/12)).^5
 x=r.*cos(fi);
 y=r.*sin(fi);
 plot(x,y)
 grid on
+%%
+%14)11 цепная линия
+x=-10:0.1:10;
+a=6;
+y=a*cosh(x/a);
+plot(x,y)
+grid on
+%14)10 локон Аньези
+
