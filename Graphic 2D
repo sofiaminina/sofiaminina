@@ -35,4 +35,4 @@ plot(x,z);
 grid on
 title("x*sin(pi*x)")
 ylabel("f(x)")
-xlabel(x)
+
