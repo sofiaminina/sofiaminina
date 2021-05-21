@@ -53,3 +53,24 @@ k=1:2:202;
 x=x./k;
 y=y./k;
 plot(x,y,"Color",[0.2 0 0.7]);
+%%
+%задание 13
+x=-15:0.1:15;
+y=2.*x./(1+x.^2);
+plot(x,y)
+grid on
+
+fi=-2*pi:0.1*pi:2*pi;
+r=1./fi;
+x=r.*cos(fi);
+y=r.*sin(fi);
+plot(x,y)
+grid on
+
+fi=0:0.1:2*pi;
+fi0=pi/4;n=1;m=2;
+x=sin(m.*fi).*cos(n.*fi+fi0);
+y=sin(m.*fi).*sin(n.*fi+fi0);
+plot(x,y)
+grid on
+%%
