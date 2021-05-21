@@ -1,8 +1,8 @@
 %пример2
-fi = 0:0.1:2*pi;
-R = sin(fi)./fi;
-x = R.*cos(fi);
-y = R.*sin(fi);
+fi=0:0.1:2*pi;
+R=sin(fi)./fi;
+x=R.*cos(fi);
+y=R.*sin(fi);
 plot(x,y);
 
 grid on
@@ -11,14 +11,14 @@ xlabel('x')
 title('R=sin(fi)/fi')
 %%
 %пример3
-x = 0:0.01:2;
-y = humps(x);
-m = find(y<=40 & y>=20);
-z = (m-1).*0.01;
+x=0:0.01:2;
+y=humps(x);
+m=find(y<=40 & y>=20);
+z=(m-1).*0.01;
 
-[k,i] = max(y);
-i = (i-1)*0.01;
-plot(x,y,z, humps(z),'O', i, k,'O','MarkerFaceColor',[0 1 0]);
+[k,i]=max(y);
+i=(i-1)*0.01;
+plot(x,y,z,humps(z),'O', i, k,'O','MarkerFaceColor',[0 1 0]);
 grid on;
 %%
 %задание1
