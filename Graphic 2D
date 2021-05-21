@@ -29,10 +29,9 @@ plot(x,y)
 %задание7
 x=0:0.01*pi:10;
 y=x.*sin(pi.*x);
-z=x;
-plot(x,y);
-plot(x,z);
-grid on
-title("x*sin(pi*x)")
-ylabel("f(x)")
+plot(x,y)
 
+grid on
+ylabel("f(x)")
+xlabel("x")
+title("x*sin(pi*x)")
