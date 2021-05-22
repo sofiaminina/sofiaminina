@@ -24,3 +24,11 @@ mesh(X,Y,Z);
 plot3(X,Y,Z);
 %%
 %3
+[u,v]=meshgrid(0:0.1:2*pi,-pi/2:pi/10:pi/2);
+a=16;
+x=a*cos(u).*cos(v);
+y=a*cos(u).*sin(v);
+z=sin(u-a);
+surf(x,y,z);
+surfc(x,y,z);
+mesh(x,y,z);
