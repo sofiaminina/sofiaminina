@@ -15,5 +15,12 @@ c=sqrt(X.^2+Y.^2);
 Z=a*sin(c)./c;
 mesh(X,Y,Z);
 plot3(X,Y,Z);
+
+x=linspace(-20,12,20);
+y=linspace(-20,12,20);
+[X,Y]=meshgrid(x,y);
+Z=-X.*sin(X)-Y.*cos(Y);
+mesh(X,Y,Z);
+plot3(X,Y,Z);
 %%
 %3
