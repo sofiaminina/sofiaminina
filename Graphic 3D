@@ -1,0 +1,19 @@
+%1
+a=51;b=45;c=30;d=36;
+x=linspace(-25,5,25);
+y=linspace(-25,5,25);
+[X,Y]=meshgrid(x,y);
+Z = (a*X + b*Y + d)/c;
+surfc(X,Y,Z)
+%%
+%2
+a = 10;
+x = linspace(-20,12,20);
+y = linspace(-20,12,20);
+[X,Y] = meshgrid(x,y);
+c=sqrt(X.^2+Y.^2);
+Z = a*sin(c)./c;
+mesh(X,Y,Z);
+plot3(X,Y,Z);
+%%
+%3
