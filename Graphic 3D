@@ -32,3 +32,12 @@ z=sin(u-a);
 surf(x,y,z);
 surfc(x,y,z);
 mesh(x,y,z);
+%3.h
+[u,v]=meshgrid(0:0.1:2*pi,-pi/2:0.1:pi/2);
+a=3;b=1;
+x=a*cos(u).*cos(v);
+y=a*sin(u).*cos(v);
+z=b*sin(v);
+surf(x,y,z);
+surfc(x,y,z);
+mesh(x,y,z);
