@@ -23,7 +23,7 @@ Z=-X.*sin(X)-Y.*cos(Y);
 mesh(X,Y,Z);
 plot3(X,Y,Z);
 %%
-%3
+%3.k
 [u,v]=meshgrid(0:0.1:2*pi,-pi/2:pi/10:pi/2);
 a=16;
 x=a*cos(u).*cos(v);
