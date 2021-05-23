@@ -1,0 +1,27 @@
+%1.a
+a=0;b=2*pi;m=0.1;
+x=a:0.01:b;
+y=exp(-m*x.^2).*cos(x.^2);
+f=@(x)exp(-m*x.^2).*cos(x.^2);
+plot(x,y);
+grid on
+xr=ginput(2);
+[x_m,y_m]=fminbnd(f,xr(1,1),xr(2,1));
+hold on
+plot(x_m,y_m,"r*",xr(1,1),xr(1,2),"g*",xr(2,1),xr(2,2),"g*",'Linewidth',3);
+hold off
+%%
+%1.2
+a=0;b=2*pi/3;a1=1;b1=2;
+x=a:0.01:b;
+y=1./((a1*cos(x)+b1*sin(x)).^2);
+f=@(x)1./((a1*cos(x)+b1*sin(x)).^2);
+plot(x,y); 
+grid on
+xr=ginput(2);
+[x_m,y_m]=fminbnd(f,xr(1,1),xr(2,1));
+hold on
+plot(x_m,y_m,"r*",xr(1,1),xr(1,2),"g*",xr(2,1),xr(2,2),"g*",'Linewidth',3);
+hold off
+%%
+%1.3
