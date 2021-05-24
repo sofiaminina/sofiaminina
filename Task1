@@ -1,0 +1,8 @@
+F=readtable("fileExcel.xlsx");
+R=string(F.x___(F.x____=="Руководитель"));
+I=string(F.x___(F.x____=="Исполнитель"));
+Role=["Руководители";"Исполнители"];
+People=[sprintf("%s,",R);
+sprintf("%s,",I)];
+T=table(Role, People);
+writetable(T,"outFile.xlsx")
