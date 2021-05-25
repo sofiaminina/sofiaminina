@@ -1,0 +1,9 @@
+%4.1
+p=[1 -2  6 -10 16];
+x0=4;H=[1 -x0];
+[q,r]=deconv(p,H);
+[q2,r2]=deconv(q,H);
+disp(r2(4));
+disp(polyval(polyder(p),x0));
+%%
+%4.2
