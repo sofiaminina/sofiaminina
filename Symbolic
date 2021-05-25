@@ -1,0 +1,6 @@
+%1.1
+syms x;
+p=[1 4 -2 -14 -3 -18];
+f=poly2sym(p);
+disp(factor(f));
+%
