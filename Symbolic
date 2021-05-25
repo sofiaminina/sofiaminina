@@ -3,4 +3,14 @@ syms x;
 p=[1 4 -2 -14 -3 -18];
 f=poly2sym(p);
 disp(factor(f));
-%
+%2.2
+syms x;
+f=(tan(x))^(tan(2*x));
+disp(limit(f,pi/4));
+%2.3
+p1 = [7 1 0 -1];
+f1=poly2sym(p1);
+p2 = [5 2 1];
+f2=poly2sym(p2);
+f=f1/f2;
+disp(limit(f,inf));
