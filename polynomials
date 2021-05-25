@@ -13,3 +13,11 @@ x0=-2-1i;H=[1 -x0];
 [q2,r2]=deconv(q,H);
 disp(r2(5));
 disp(polyval(polyder(p),x0));
+%%
+%5
+syms n;syms x;
+p=sym2poly(subs(x^(2*n)-n*x^(n+1)+n*x^(n-1)-1,n,2));
+disp(roots(p));
+x=linspace(-1,1,100);
+plot(x,polyval(p,x));
+grid on
