@@ -5,7 +5,32 @@ f=polyval(P,x);
 plot(x,f); 
 grid on;
 %%
-
+%2
+p=[1 0.1 0.2 -0.2 -2 1];
+r=roots(p);
+r_m=max(r);
+x=-abs(r_m):0.02:abs(r_m);
+y=polyval(p,x);
+pr=polyder(p);
+plot(x,y);
+grid on;
+hold on;
+x1=1/2*abs(r_m);
+tan=polyval(p,x1)+polyval(pr,x1).*(x-x1);
+plot(x,tan);hold on;
+x2=-1/2*abs(r_m);
+x2k=1/(polyval(pr,x2));
+x=-abs(r_m):0.01:-abs(r_m)+1;
+n=-x2k.*x+x2k*x2+polyval(p,x2);
+plot(x,n);hold off;
+t=0:0.02:2*pi;
+r_r=real(r(1));
+u=r_r*cos(t);
+v=r_r*sin(t);
+plot(u,v);hold on
+plot(real(r),imag(r),'*');
+grid on;
+hold off;
 %4.1
 p=[1 -2  6 -10 16];
 x0=4;H=[1 -x0];
