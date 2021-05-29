@@ -1,0 +1,17 @@
+D=readtable("Data_18032020.xlsx");
+birth=datenum(D.x____________);
+age=now-birth;age=datevec(age);
+age=age(1:length(D.x_______))';
+%%disp(age);
+D.age = age;
+ids=strlength(string(D.id1))+strlength(string(D.id2)) == 22;  
+k=D.x_______________________ ./ D.x__________________;
+
+v=ones(length(D.id1), 1);
+v((k>0.4)&(k<=0.5))=0.5;
+v((k>0.3)&(k<=0.4))=0.4;
+v((k>0.2)&(k<=0.3))=0.3;
+v((k>0.1)&(k<=0.2))=0.2;
+v((k<=0.1))=0.1;
+D.v=v;
+writetable(D, "OutFile.xlsx");
